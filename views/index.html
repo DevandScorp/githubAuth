@@ -13,7 +13,7 @@
     <script>
             function getStatus() {
                 fetch('/success').then(res => res.json()).then(res => {
-                    document.getElementById("info").innerHTML = res;
+                    document.getElementById("info").innerHTML = JSON.stringify(res);
                 })
             }
             
