@@ -1,0 +1,35 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GitHub Passport Example</title>
+    <meta name="description" content="an example app implementing GitHub oauth with passport">
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+            function getStatus() {
+                fetch('/success').then(res => res.json()).then(res => console.log(res))
+            }
+            
+        </script>
+  </head>
+  <body>
+    <header>
+      <h1>GitHub Passport Example</h1>
+      <h2>An example app showing how to use passport and the GitHub api for authentication</h2>
+    </header>
+
+    <main>
+      <a class="container" href="/auth/github">Log In with GitHub</a>
+      <button onclick="getStatus()">Click</button>
+    </main>
+
+    <script src="https://button.glitch.me/button.js" data-style="glitch"></script>
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+
+  </body>
+</html>
