@@ -12,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
             function getStatus() {
-                fetch('/success').then(res => res.json()).then(res => console.log(res))
+                fetch('/success').then(res => res.json()).then(res => {
+                    document.getElementById("info").innerHTML = res;
+                })
             }
             
         </script>
@@ -26,6 +28,7 @@
     <main>
       <a class="container" href="/auth/github">Log In with GitHub</a>
       <button onclick="getStatus()">Click</button>
+      <div id="info"></div>
     </main>
 
     <script src="https://button.glitch.me/button.js" data-style="glitch"></script>
